@@ -1,0 +1,26 @@
+# vagrant_rancher_cluster
+## Requirement Install
+### Virtual Box install
+* https://www.virtualbox.org/wiki/Downloads
+
+### Vagrant install
+* https://www.vagrantup.com/downloads.html
+* Box(Virtual Machine OS image) add
+```
+vagrant box add ubuntu1404 https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
+```
+
+### Source Pull
+* git clone https://github.com/goody80/vagrant_rancher_cluster.git
+
+
+## How to use
+### Instruction
+```
+cd vagrant_rancher_cluster
+vagrant up rancher && vagrant up vmhost0{1..2}
+```
+
+### Rancher addmin page
+* http://localhost:8080
+
