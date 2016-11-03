@@ -18,9 +18,18 @@ vagrant box add ubuntu1404 https://cloud-images.ubuntu.com/vagrant/trusty/curren
 ### Instruction
 ```
 cd vagrant_rancher_cluster
-vagrant up rancher && vagrant up vmhost0{1..2}
+vagrant up rancher && vagrant up vmhost01  && vagrant up vmhost02
 ```
 
 ### Rancher addmin page
 * http://localhost:8080
+
+### Test Server connection
+```
+telnet 192.200.10.100 8080
+```
+
+## Host information add
+### Host Registration URL
+* Something else: http://192.200.10.100:8080
 
