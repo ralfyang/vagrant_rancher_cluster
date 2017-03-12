@@ -1,2 +1,3 @@
 rancher_db/
 .vagrant/
+docker-elk/
