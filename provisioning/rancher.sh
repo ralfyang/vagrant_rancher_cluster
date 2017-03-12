@@ -40,7 +40,10 @@ cd $Source
 curl -sL bit.ly/ralf_dcs -o ./dcs
 sudo chmod 755 ./dcs
 sudo mv ./dcs /usr/bin/dcs
-sudo docker run -d --restart=unless-stopped -p 8080:8080 rancher/server
+
+#sudo docker run -d --restart=unless-stopped -p 8080:8080 rancher/server
+sudo mkdir /vagrant/rancher_db 
+sudo docker run -d -v /vagrant/rancher_db/mysql/:/var/lib/mysql --restart=unless-stopped -p 8080:8080 rancher/server
 
 ## Docker image pull for default use
 sudo docker pull ubuntu:14.04
