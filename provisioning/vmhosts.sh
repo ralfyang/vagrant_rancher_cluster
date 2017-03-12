@@ -16,36 +16,26 @@ sudo apt-get install \
     curl \
     software-properties-common -y
 
-
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-
 sudo apt-key fingerprint 0EBFCD88
-
-
 sudo add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
    $(lsb_release -cs) \
    stable"
 
-
 sudo apt-get update
-
 sudo apt-get install docker-ce -y
-
 apt-cache madison docker-ce
-
 
 # Docker-compose install
 curl -L https://github.com/docker/compose/releases/download/1.8.0/docker-compose-`uname -s`-`uname -m` > /usr/bin/docker-compose
 chmod 755 /usr/bin/docker-compose
-
 
 Source="/data/source/"
 mkdir -p $Source
 
 # elk stack compose file download
 cd $Source 
-
 
 ## Get the dcs from docker
 curl -sL bit.ly/ralf_dcs -o ./dcs
