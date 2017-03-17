@@ -45,3 +45,6 @@ sudo mv ./dcs /usr/bin/dcs
 sudo docker pull ubuntu:14.04
 sudo docker pull rancher/agent-instance:v0.8.3
 sudo docker pull rancher/agent:v1.0.2
+
+## Config for the ElasticSearch
+echo "vm.max_map_count=262144" >> /etc/sysctl.conf
