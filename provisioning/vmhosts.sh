@@ -48,3 +48,4 @@ sudo docker pull rancher/agent:v1.0.2
 
 ## Config for the ElasticSearch
 echo "vm.max_map_count=262144" >> /etc/sysctl.conf
+sysctl -w vm.max_map_count=262144
