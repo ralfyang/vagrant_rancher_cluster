@@ -1,20 +1,13 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
-
-# All Vagrant configuration is done below. The "2" in Vagrant.configure
-# configures the configuration version (we support older styles for
-# backwards compatibility). Please don't change it unless you know what
-# you're doing.a
 OS_NAME="ubuntu1404"
 OS_URL="https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box"
-
 
 VAGRANTFILE_API_VERSION = "2"
 NODE_COUNT = 10
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "shell", path: "./provisioning/default_setting.sh", args: ""
   config.vm.synced_folder "~/.ssh/", "/tmp/conf.d/"
-  config.vm.synced_folder "/Users/jiookyang/Downloads", "/tmp/data/"
 
 ## For Rancher VM Hosts instance  
   NODE_COUNT.times do |i|
@@ -51,3 +44,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       vb.customize ["modifyvm", :id, "--cpus", "2"]   
   end 
 end
+
+
+
+
